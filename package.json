@@ -1,0 +1,25 @@
+{
+  "name": "peperate",
+  "version": "1.0.0",
+  "description": "Site web Peperate",
+  "main": "reactapp/build/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lellouc/Peperate.git"
+  },
+  "author": "Baptiste Leo Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lellouc/Peperate/issues"
+  },
+  "homepage": "https://github.com/lellouc/Peperate#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemailer": "^4.4.2",
+    "nodemon": "^1.14.12"
+  }
+}
