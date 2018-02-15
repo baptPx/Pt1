@@ -1,22 +1,42 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
 import './css/bootstrap.css';
+import './App.css';
 import Entete from './Entete.js';
+import Accueil from './Accueil.js';
+import GSAP from 'react-gsap-enhancer'
+import TimelineMax from 'gsap';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import rafSchedule from 'raf-schd';
+import TrackVisibility from 'react-on-screen';;
+
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 class App extends Component {
+
+ constructor(props) {
+   super(props);
+ }
+
+  handleScroll(e) {
+    console.log(e);
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <Entete />
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className=" container-fluid">
+      <ParallaxProvider>
+        <Entete />
+      </ParallaxProvider>
+      <TrackVisibility>
+           <Accueil />
+       </TrackVisibility>
+
       </div>
     );
   }
 }
 
+const GSAPDemo = GSAP()(App)
 export default App;
