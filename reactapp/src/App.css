@@ -6,107 +6,104 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }*/
-
-@font-face {
-font-family: 'Roboto';
-src: url('/font/Roboto-Bold.ttf') format('ttf');
-font-weight: bold;
-}
-
-header {
-}
 body {
   background-color: #333333;
 }
-span {
-  color:red;
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/Roboto-Bold.ttf') format('ttf');
+  font-weight: bold;
 }
+
+
+.marge5 {
+  margin-top:5%;
+}
+.marginl15 {
+  margin-left:15%;
+}
+.marginl10 {
+  margin-left:10%;
+}
+
+
+/* Entête */
+
 .sections{
-  margin-top: 15px;
+  padding-top: 5vw;
   text-align: center;
+
 }
 .sections  span{
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
-.summary{
-  margin-top: 15px;
-}
 Header {
-  /* position : fixed; */
-}
-@keyframes example {
-    from {left: 500px; opacity:0}
-    to {left:0px; opacity:1}
+  position : fixed;
+  z-index:100;
+  background-color: #333333;
+  top:0px
+
 }
 @keyframes sectionAnim {
     from {font-size:1vw; color: #FFFFFF}
-    to {font-size:1.5vw; color: #ad8900}
+    to {font-size:1.5vw; color: #b99458}
 }
 @keyframes sectionAnim2 {
     to {font-size:1vw; color: #FFFFFF}
-    from {font-size:1.5vw; color: #ad8900}
-}
-
-.block{
-  color:white;
-  background-color: red;
-  /* position:relative; */
-    animation-name: example;
-    animation-duration: 1.4s;
-}
-.l {
-  background-color:red;
+    from {font-size:1.5vw; color: #b99458}
 }
 .mouseOver {
   animation-name: sectionAnim;
   animation-duration: 0.4s;
   font-size:1.5vw;
-  color: #ad8900
+  color: #b99458
 }
 .mouseOut {
   animation-name: sectionAnim2;
   animation-duration: 0.4s;
-  font-size:100%;
+  font-size:1vw;
   color: #FFFFFF
 }
-.Accueil {
-  margin-top: 5%;
 
+
+/* Accueil */
+.Accueil {
+  margin-top: 12%;
 }
 @keyframes missionAnim {
-    from {transform: rotate(0deg); right: 0%}
+    from {transform: rotate(0deg); right: -30%}
     to {transform: rotate(-90deg); right: 10% }
 }
-@keyframes missionAnimI {
+@keyframes missionAnimI {  /* animation de l'image */
     from {right:100%;}
-    to {right:20%;}
+    to {right:0%;}
 }
 .imageM {
   animation-name: missionAnimI;
   animation-duration: 1.5s;
-  right:20%;
-  position:absolute
+  position:relative;
 }
-@keyframes titreAnimation {
-    from {left:20%; opacity: 0;}
-    to {left:0%; opacity: 1;}
+ @keyframes titreAnimation {
+    from {left:20%; opacity: 0; }
+    to {left:0%; opacity: 1; }
 }
 .titreA {
-  color:#ad8900;
+  color:#b99458;
   font-size: 3vw;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  position:relative;
 
   animation-name: titreAnimation;
   animation-duration: 1s;
-  position:relative
+  /* position:absolt; */
 
 }
 .missionT {
-  color: #ad8900;
-  font-size:5vw;
+  color: #b99458;
+  font-size:5.5vw;
   transform: rotate(-90deg);
   position:absolute;
   right:10%;
@@ -116,7 +113,28 @@ Header {
   animation-name: missionAnim;
   animation-duration: 1.5s;
 }
-.marge5 {
-  margin-top:5%;
 
+@keyframes textAnimation {
+   from {transform: translateY(3vw); opacity: 0;}
+   to {transform: translateY(0vw); opacity: 1;}
+}
+@keyframes emptyAnim {
+   from { opacity: 0;}
+   to { opacity: 0;}
+}
+.descriptionP {
+  color:#FFFFFF;
+  font-size: 1.3vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  position:relative;
+  animation-name: textAnimation;
+  animation-duration: 1.5s;
+  background-color: red;
+}
+.far {
+  opacity:0;
+}
+.margint10 {
+  margin-top:10vw;
 }

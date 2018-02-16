@@ -41,7 +41,7 @@ constructor(props ) {
   render() {
     return (
       <div className="App">
-        <header className="App-header row">
+        <header className=" row">
           <div  className="col-lg-2 ">
             <img className="logo" src="img/logo.png" width="100%" />
           </div>
